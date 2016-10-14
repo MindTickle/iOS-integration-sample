@@ -8,7 +8,13 @@
 
 #import "ViewController.h"
 
+#import <MindTickleAuth.h>
+
 @interface ViewController ()
+
+@property (nonatomic, weak) IBOutlet UIButton* button;
+@property (nonatomic, weak) IBOutlet UILabel* label;
+@property (nonatomic, weak) IBOutlet UITextField* field;
 
 @end
 
@@ -19,6 +25,11 @@
     // Do any additional setup after loading the view, typically from a nib.
 }
 
+- (void)viewWillAppear:(BOOL)animated {
+    [super viewWillAppear:animated];
+    MindTickleAuth*auth = [[MindTickleAuth alloc] initWithAccessKey:@"gwgwe" secretKey:@"wgw"];
+    self.label.text = [auth generateTokenFor:nil];
+}
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
