@@ -14,8 +14,6 @@
 @property (nonatomic, weak) IBOutlet UILabel* label;
 @property (nonatomic, weak) IBOutlet UITextField* field;
 
-@property (nonatomic) MindTickleAuth* mtauth;
-
 @end
 
 @implementation ViewController
