@@ -7,6 +7,7 @@
 //
 
 #import <UIKit/UIKit.h>
+#import <MindTickleAuth.h>
 
 @interface AppDelegate : UIResponder <UIApplicationDelegate>
 

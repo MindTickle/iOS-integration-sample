@@ -8,8 +8,6 @@
 
 #import "ViewController.h"
 
-#import <MindTickleAuth.h>
-
 @interface ViewController ()
 
 @property (nonatomic, weak) IBOutlet UIButton* button;
@@ -28,10 +26,6 @@
 
 - (void)viewWillAppear:(BOOL)animated {
     [super viewWillAppear:animated];
-    [MindTickleAuth initWithDomain:@"test1.idea08.mindtickle.com" secretKey:@"c3a5ec565237981408e838105019f6d97c69eebf10d75355877f979892dcfd16bf52477dc40bc74cb8084716e9f194c4" email:@"hridayesh.gupta@mindtickle.com"];
-}
-- (IBAction)openMindTickle:(id)sender {
-    [MindTickleAuth openMindTickle];
 }
 
 - (void)didReceiveMemoryWarning {

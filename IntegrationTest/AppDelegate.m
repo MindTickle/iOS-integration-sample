@@ -17,6 +17,7 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     // Override point for customization after application launch.
+     [MindTickleAuth initWithDomain:@"yourdomain.mindtickle.com" secretKey:@"yoursecret" email:@"email@example.com"];
     return YES;
 }
 
