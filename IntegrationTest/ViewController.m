@@ -16,25 +16,27 @@
 @property (nonatomic, weak) IBOutlet UILabel* label;
 @property (nonatomic, weak) IBOutlet UITextField* field;
 
+@property (nonatomic) MindTickleAuth* mtauth;
+
 @end
 
 @implementation ViewController
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    // Do any additional setup after loading the view, typically from a nib.
 }
 
 - (void)viewWillAppear:(BOOL)animated {
     [super viewWillAppear:animated];
-    MindTickleAuth*auth = [[MindTickleAuth alloc] initWithAccessKey:@"gwgwe" secretKey:@"wgw"];
-    self.label.text = [auth generateTokenFor:nil];
+    [MindTickleAuth initWithDomain:@"test1.idea08.mindtickle.com" secretKey:@"c3a5ec565237981408e838105019f6d97c69eebf10d75355877f979892dcfd16bf52477dc40bc74cb8084716e9f194c4" email:@"hridayesh.gupta@mindtickle.com"];
+}
+- (IBAction)openMindTickle:(id)sender {
+    [MindTickleAuth openMindTickle];
 }
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
 }
-
 
 @end
