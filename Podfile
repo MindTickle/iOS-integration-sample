@@ -4,7 +4,7 @@
 # use_frameworks!
 
 target 'IntegrationTest' do
-pod 'MindTickleIntegrations', :git => 'git@github.com:MindTickle/MindTickle-Integration-iOS.git', :tag=> '1.0'
+pod 'MindTickleIntegrations', '1.0'
 end
 
 target 'IntegrationTestTests' do
